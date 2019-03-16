@@ -1,0 +1,27 @@
+{ 
+	"name": "Strava Kudo bot", 
+	"version": "1.01", 
+	"manifest_version" : 2, 
+	"description": "Gives Kudos to all",
+	"icons": { 
+		"16": "images/icon16.png", 
+		"48": "images/icon48.png", 
+		"128": "images/icon128.png" 
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://www.strava.com/*"],
+			"js": ["content.js"]
+		}
+	],	
+	"background" : {
+		"scripts" : ["background.js"] 
+	}, 
+	"page_action": { 
+		"default_icon": { 
+			"16":"images/icon16.png", 
+			"24": "images/icon24.png",
+			"32": "images/icon32.png" 
+		}
+	}
+}
